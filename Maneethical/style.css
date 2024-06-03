@@ -1,0 +1,146 @@
+@import "https://www.wfonts.com/#google_vignette";
+html,body
+{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+body
+{
+   font-family: sans-serif;
+}
+/*NAVBAR*/
+.navbar_section
+{
+    margin-top:50px;
+}
+.nav_pc
+{
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.nav_pc li
+{
+    font-weight: lighter;
+    padding-right:25px;
+    padding-left:25px;
+    padding-top:12px;
+    padding-bottom:12px;
+    margin:0px;
+    cursor:pointer;
+}
+.nav_pc li:hover
+{
+    color:green;
+    transition: 0.3s;
+}
+.nav_pc li#Logo_ID
+{
+    margin-right:70px;
+}
+.nav_pc li#Home_ID
+{
+    color:green;
+}
+.nav_pc li#Home_ID:hover
+{
+    color: black;
+    transition: 0.3s;
+}
+.nav_pc li#button_ID
+{
+    margin-left:30px;
+    background-color:black;
+    padding-right:20px;
+    padding-left:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.nav_pc li#button_ID div
+{
+    font-weight: bolder;
+    color:white;
+}
+.nav_pc li#button_ID:hover
+{
+    transition: 0.3s;
+    background-color: #348034;
+}
+
+/*MAIN SECTION*/
+.list_images
+{
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.list_images li
+{
+    margin:0 2px 0 2px;
+}
+
+/*TEXT*/
+.container_text
+{
+    text-align: center;
+    margin:80px 25% 0 25%;
+    letter-spacing: 0.05em;
+    font-weight: 100;
+}
+.container_text .title
+{
+    font-weight: lighter;
+    font-size: 24px;
+}
+.container_text .content
+{
+    font-weight: lighter;
+    font-size: 17px;
+}
+.container_text .container_button
+{
+    margin-top:25px;
+    padding: 10px 35px 10px 35px;
+    border:2px solid black;
+    background-color:#fff;
+    font-weight: lighter;
+}
+.container_text .container_button:hover
+{
+    background-color:darkgreen;
+    transition: 0.3s;
+    color:white;
+}
+/*FOOTER*/
+.footer_section
+{
+    margin:45px 20% 45px 20%;
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+    font-weight: lighter;
+    font-size:13px;
+}
+.footer_section .DaysHours
+{
+    display: flex;
+}
+.footer_section .Days
+{
+    list-style:none;
+}
+.footer_section .Hours
+{
+    list-style:none;
+}
+.footer_section .Phone
+{
+    list-style:none;
+}
+
+
+
+
