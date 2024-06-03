@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home • Ilarity</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="over"></div>
+
+  <div style="z-index: 1;" class="container">
+    <header>
+      <div onclick="OpenMenu();" class="menu"><i class='bx bx-menu'></i>Menu</div>
+      <ul class="navbar">
+        <li style="opacity:1;" class="item">Home</li>
+        <li class="item">Forum</li>
+        <li class="store">Store</li>
+        <li class="item">Rules</li>
+        <li class="item">Apply</li>
+      </ul>
+
+
+      <div class="lateralbar">
+        <div class="header_bar">
+          <div class="text_nav">Ilarity</div>
+          <i onclick="CloseMenu();" class='bx bx-x'></i>
+        </div>
+        <ul>
+          <li style="color:rgba(255,255,255,1)" class="item_mobile">Home</li>
+          <li class="item_mobile">Forum</li>
+          <li class="item_mobile">Store</li>
+          <li class="item_mobile">Rules</li>
+          <li class="item_mobile">Apply</li>
+        </ul>
+        <div class="account">
+          <div><i class='bx bxs-arrow-to-right'></i>Log In</div>
+          <div><i class='bx bxs-user-plus'></i>Register</div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="main_header">
+        <div onclick="CopyIP();" class="container_items">
+          <div>SERVER IS OFFLINE <br /><span style="color:#fff;font-size: 12px;">PLAY.ILARITY.IT</span></div>
+          <svg style="width:50px; margin-left:15px;" class="creeper" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z">
+            </path>
+          </svg>
+        </div>
+        <div onclick="Refresh();" class="logo">
+          <img width="350px;" src="IMG/Logo.webp">
+        </div>
+        <div class="container_items">
+          <svg style="width:50px; margin-right:15px;" class="discord" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 245 240">
+            <path class="st0"
+              d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z">
+            </path>
+            <path class="st0"
+              d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z">
+            </path>
+          </svg>
+          <div>59 USERS ONLINE <br /><span style="color:#fff;font-size: 12px;">DISCORD.GG/ILARITY</span></div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="popup">
+    <i class='bx bx-check'></i>
+    <h2>IP Copied</h2>
+    <p>Now go join the server</p>
+    <div class="btn" onclick="ClosePopup();">Close</div>
+  </div>
+  </header>
+
+
+
+
+
+
+  <section>
+    <div class="welcome-card">
+      <div class="before">
+        <img src="IMG/skin.png" alt="">
+        <div class="text">
+          <div class="title">Welcome to Ilarity!</div>
+          <div class="subtitle">To get access to all functions of the website please register!</div>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="login">Log In</div>
+        <div class="register">Register</div>
+      </div>
+    </div>
+    <div class="lateral-card">
+      <div class="store-card">
+        <div class="text">
+          <div class="title">STORE</div>
+          <div class="subtitle">Visit now!</div>
+        </div>
+        <i class='bx bxs-basket'></i>
+      </div>
+      <div class="staff-card">
+        <div class="title">Online Staff</div>
+        <div class="subtitle">There are no staff members online.</div>
+      </div>
+      <div class="user-card">
+        <div class="title">Online Users</div>
+        <div class="subtitle">There are no users online.</div>
+      </div>
+      <div class="statistics-card">
+        <div class="title">Statistics</div>
+        <ul>
+          <li class="statistics-item">Total Threads</li>
+          <li class="statistics-item">Total Posts</li>
+          <li class="statistics-item">Users Registered</li>
+          <li class="statistics-item">Online Users</li>
+          <li class="statistics-item">Online Guests</li>
+          <li class="statistics-item">Total Online</li>
+          <li class="statistics-item">Latest Member</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <footer>
+    <div class="items">
+      <div class="Join">
+        <div class="title">
+          <div class="text">Join now!</div>
+          <div class="line"></div>
+        </div>
+        <div class="subtitle">Welcome to Ilarity, a world full of adventures and surprises.</div>
+        <div class="button">
+          <div class="ip">PLAY.ILARITY.NET</div>
+          <i class='bx bx-chevrons-right'></i>
+        </div>
+      </div>
+      <div class="Links">
+        <div class="title">
+          <div class="text">Links</div>
+          <div class="line"></div>
+        </div>
+        <ul>
+          <li class="items">Terms and Conditions</li>
+          <li class="items">Privacy Policy</li>
+          <li class="items">Cookie Notice</li>
+        </ul>
+      </div>
+      <div class="Store">
+        <div class="title">
+          <div class="text">Store</div>
+          <div class="line"></div>
+        </div>
+        <div class="subtitle">Visit the store to support the server and get amazing benefits!</div>
+        <div class="shop">
+          <div class="text">Shop now!</div>
+          <i class='bx bx-cart'></i>
+        </div>
+      </div>
+    </div>
+    <div class="sign"><span style="color:rgba(189,189,189);">2024</span> Ilarity</div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    //SCRIPT MOBILE NAV
+    function CloseMenu() {
+      let nav = document.querySelector(".lateralbar");
+      gsap.to(nav, { x: -250, duration: 0.3 });
+    }
+    function OpenMenu() {
+      let nav = document.querySelector(".lateralbar");
+      let body = document.querySelector("body");
+      gsap.to(nav, { x: 0, duration: 0.3 });
+    }
+  </script>
+
+
+
+  <script>
+    //Script Refresh Pagina Logo
+    function Refresh() {
+      window.location.reload();
+    }
+  </script>
+
+
+  <script>
+    //Script Copy IP
+    let popup = document.querySelector(".popup");
+    let overlay = document.querySelector(".over");
+    function CopyIP() {
+      IP = "play.ilarity.net";
+      navigator.clipboard.writeText(IP);
+      gsap.to(popup, { opacity: 1, scale: 1, duration: 0.3 });
+      overlay.classList.add("overlay");
+    }
+
+    function ClosePopup() {
+      gsap.to(popup, { opacity: 0, scale: 0, duration: 0.3 });
+      overlay.classList.remove("overlay");
+    }
+  </script>
+  </div>
+</body>

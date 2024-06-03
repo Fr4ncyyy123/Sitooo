@@ -1,0 +1,536 @@
+body, html{background-color:#000; font-family:'Intro', Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+.overlay {width:100%; height:100%; border: 1px solid red; z-index:998; position: absolute;
+}
+header
+{
+    width:100vw; height:50vh; background-color:#000; background: linear-gradient(0deg, rgba(0,0,0,1)0%, rgba(248,0,255,0.7)100%);
+}
+header .navbar
+{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    font-size: 21px;
+    color:#fff;
+    font-weight:bolder;
+}
+header .navbar .item
+{
+    padding:0 20px 0 20px;
+    opacity: 0.6;
+}
+header .navbar .item:hover
+{
+    opacity:1;
+    transition: 0.2s;
+    cursor:pointer;
+}
+.store{background-color: #f800ff; border-radius: 5px; opacity: 1; padding:13px 20px 13px 20px;}
+.store:hover{cursor:pointer;background-color:rgba(248,0,255,0.6); transition: 0.2s;}
+
+
+.menu{cursor: pointer; display: none; padding:20px; font-size: 21px; color:rgba(255, 255, 255, 0.6); font-weight: bold;}
+.hightbar 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.lateralbar
+{
+    top:0;
+    left:0;
+    position: absolute;
+    width:250px;
+    height: 100vh;
+    background-color: #151515;
+    display: fixed;
+    display: block;
+    transform: translateX(-100%);
+    z-index:997
+}
+.lateralbar .header_bar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:25px;
+    border-bottom:2px solid rgba(255,255,255,0.4);
+}
+.text_nav{
+    color:#f800ff;
+    font-size:30px;
+}
+.header_bar i{color:rgba(255,255,255,0.6); font-size: 25px; padding:12px;background-color: rgb(32, 32, 32); border-radius: 5px;}
+.header_bar i:hover
+{
+    background-color: rgba(255,255,255,0.2);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.lateralbar ul 
+{
+    padding:20px;
+    border-bottom:2px solid rgba(255,255,255,0.4)
+}
+.lateralbar .item_mobile
+{
+    list-style: none;
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    padding:10px;
+    cursor: pointer;
+}
+.lateralbar .item_mobile:hover
+{
+    color:rgba(255, 255, 255, 1);
+    transition: 0.2s;
+}
+
+
+.account
+{
+    display:block;
+    padding:20px;
+    color:rgba(255,255,255,0.6);
+    font-size: 20px;
+}
+.account div
+{
+    padding:12px 0px 12px 0px;
+    cursor: pointer;
+}
+
+
+.main_header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px;
+}
+.main_header .logo:hover
+{
+    cursor:pointer;
+}
+.main_header .container_items
+{
+    display:flex;
+    align-items: center;
+    color:#f800ff;
+    text-align: end;
+}
+.main_header .container_items:hover 
+{
+    cursor:pointer;
+}
+
+
+
+.popup
+{
+    opacity: 0;
+    position: absolute;
+    left:38%;
+    top:30%;
+    width:500px;
+    height:400px;
+    background-color: #181818;
+    color:rgba(255,255,255,0.75);
+    padding:45px;
+    border-radius: 15px;
+    transform: scale(0);
+    z-index: 999;
+}
+.popup .bx-check
+{
+    font-size: 55px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    padding:30px;
+    border-radius:100%;
+    border:2px solid rgba(165, 220, 134, .3);
+    margin-bottom:15px;
+}
+.popup h2,p,.btn
+{
+    text-align: center;
+}
+.popup p 
+{
+    color:rgba(255,255,255,0.4);
+}
+.popup .btn 
+{
+    padding:15px 0 15px 0;
+    background-color: #f800ff;
+    margin-right:145px;
+    margin-left:145px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:1024px)
+{
+    .container_items div 
+    {
+        display: none;
+    }
+}
+@media(max-width:600px)
+{
+    header
+    .container_items div,svg 
+    {
+        display: none;
+    }
+    header .navbar
+    {
+        display: none;
+    }
+    .menu 
+    {
+        display: block;
+    }
+    .container_items .creeper 
+    {
+        position: absolute;
+        top:15px;
+        right:15px;
+        display: block;
+        transform: translateX(-65px);
+        font-size: 4px;
+    }
+    .container_items .discord 
+    {
+        position: absolute;
+        top:15px;
+        right:15px;
+        display: block;
+    }
+}
+
+
+
+
+
+
+/*-----------------------------------------------------------------
+
+
+                       MAIN SECTION
+
+
+-----------------------------------------------------------------*/
+
+
+section
+{
+    width:100%;
+    height:auto;
+    color:#fff;
+    display: flex;
+    align-items: start;
+    justify-content:end;
+    padding: 0 15% 0 0;
+}
+
+
+/*--------------------
+    WELCOME CARD
+--------------------*/
+.welcome-card
+{
+    background-color: #101010;
+    width:70%;
+    border-radius:15px;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:60px;
+}
+.welcome-card .before
+{
+    display: flex;
+    width:100%;
+}
+.welcome-card img 
+{
+    width:75px;
+}
+.welcome-card .text .title
+{
+    color:#f800ff;
+    font-size: 25px;
+}
+.welcome-card .text .subtitle
+{
+    color:rgba(189,189,189);
+    width:100%;
+}
+.welcome-card .text 
+{
+    width:100%;
+}
+.welcome-card .buttons
+{
+    display: flex;
+}
+.welcome-card .buttons .login, .register
+{
+    padding: 10px 20px 10px 20px;
+    background-color: #f800ff;
+    margin:5px;
+    border-radius:8px;
+}
+
+
+/*-------------------
+    STORE CARD
+-------------------*/
+
+
+.store-card
+{
+    width:auto;
+    display: flex;
+    padding:5px 18px 5px 18px;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(248 0 255 / 70%), rgba(248 0 255 / 70%));
+    border:3px solid #f800ff;
+    align-items: center;
+    transition: 0.3s;
+}
+.store-card:hover 
+{
+    box-sizing: border-box;
+    cursor:pointer;
+    padding:5px 27px 5px 27px;
+    background-color: rgb(248, 0, 255,0.2);
+    transition: 0.3s;
+    box-sizing: border-box;
+
+}
+.store-card .text
+{
+    text-align: justify;
+}
+.store-card .text .title
+{
+    font-size: 30px;
+    font-style: italic;
+}
+.store-card .text .subtitle
+{
+    color:rgba(189,189,189);
+}
+.store-card i 
+{
+    font-size: 35px;
+    margin:20px;
+}
+
+/*--------------------------
+            CARDS
+-------------------------*/
+.staff-card, .user-card, .statistics-card
+{
+    width:auto;
+    display: flex;
+    justify-content: space-between;
+    background-color:#101010;
+    align-items: center;
+    display: block;
+    margin-top:20px;
+    border-radius:5px;
+    color:rgba(189,189,189);
+    padding:23px 10px 23px 10px;
+}
+.staff-card .title, .user-card .title, .statistics-card .title
+{
+    color:#f800ff;
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom:10px;
+}
+.statistics-card ul 
+{
+    list-style: none;
+}
+
+
+
+@media(max-width:1024px)
+{
+    section 
+    {
+        display: block;
+        justify-content: center;
+        padding:0;
+    }
+    .welcome-card,.store-card,.staff-card,.user-card,.statistics-card
+    {
+        margin-left:50%;
+        width:80%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width:680px)
+{
+    .welcome-card,.store-card,.staff-card,.user-card,.statistics-card
+    {
+        font-size: 15px;
+        margin-left:0;
+        width:100%;
+        transform: translateX(0%);
+    }
+}
+
+
+
+/*----------------------------------------------
+
+                FOOTER
+
+----------------------------------------------*/
+
+footer 
+{
+    margin-top:100px;
+    width:100%;
+    background-color: #101010;
+    color:#fff;
+    padding:40px 100px 40px 100px;
+}
+.items 
+{
+    display: flex;
+}
+
+
+/*-----------------------
+        JOIN NOW!
+-----------------------*/
+footer .items .Join, footer .items .Links, footer .items .Store
+{
+    width:33.33333333333333%;
+    border-bottom:2px solid rgba(255,255,255,0.1);
+
+}
+footer .items .Join .title, footer .items .Links .title, footer .items .Store .title
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+}
+footer .items .Join .title .line, footer .items .Links .title .line, footer .items .Store .title .line
+{
+    border:1px solid #f800ff;
+    width:27px;
+    height:9px;
+    border-radius:30px;
+    background-color: #f800ff;
+    margin-right:80px;
+    box-shadow:0 0 10px 0 #f800ff;
+}
+footer .items .Join .subtitle, footer .items .Links ul, footer .items .Store .subtitle
+{
+    margin-top:15px;
+    color: rgba(189,189,189);
+}
+footer .items .Join .button
+{
+    margin-top:15px;
+    margin-left:10%;
+    padding:15px 180px 15px 15px;
+    background-color: rgba(255,255,255,0.01);
+    color:rgba(255,255,255,0.7);
+    font-weight: bold;
+    width:70%;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+footer .items .Join .button .ip 
+{
+    margin-right: 15px;
+}
+footer .items .Join i
+{
+    font-size: 25px;
+    color:#fff;
+}
+footer .items .Join .button:hover
+{
+    background-color: rgba(255,255,255,0.05);
+    transition: 0.3s;
+    cursor:pointer;
+    width:82%;
+}
+footer .items .Store .shop 
+{
+    margin-top:15px;
+    padding:15px;
+    background-color: #f800ff;
+    color:rgba(255,255,255,1);
+    font-weight: bold;
+    width:55%;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    box-shadow:0 0 10px 0 #f800ff;
+    transition: 0.3s;
+}
+footer .items .Store .shop i 
+{
+    opacity:0.7;
+    margin-left:5px;
+}
+footer .items .Store .shop:hover
+{
+    width:57%;
+    cursor:pointer;
+    padding:16px;
+    transition: 0.3s;
+}
+footer .sign
+{
+    color:#fff;
+    padding:10px 10px 10px 10px;
+    background-color: rgba(255,255,255,0.025);
+    width:120px;
+    border-radius: 5px;
+    margin-top:15px;
+}
+
+@media(max-width:1024px)
+{
+    footer .items
+    {
+        display: block;
+
+    }
+    footer .items .Join, footer .items .Links, footer .items .Store
+    {
+        width:100%;
+    }
+    footer .items .Store .shop
+    {
+        width:150px;
+    }
+    footer .items .Store .shop:hover
+    {
+        width:155px;
+    }
+}
