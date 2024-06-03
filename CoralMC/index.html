@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-------------
+        HEADER
+    -------------->
+    <header class="header">
+        <div class="container_background"></div>
+        <div class="contenuto">
+        <div class="ip_logo_ds">
+            <div class="ip">
+                <div class="ip_copy">
+                    <p><span class="ciao" style="color:#5fefff; cursor:pointer;">Premi per copiare l'IP</span><br /><span style="cursor:pointer; font-size:22px;font-weight: 900; color:#fff;">1119 Giocatori Online</span></p>
+                </div>
+            </div>
+            <div class="logo"><img src="Foto/IMG2.png"></div>
+            <div class="discord">
+                    <div class="ds">
+                        <p><span style="color:#5fefff; cursor:pointer;">Entra nel nostro server Discord</span><br /><span style="cursor:pointer; font-size:22px;font-weight: 900; color:#fff;">7139 Utenti Online</span></p>
+                    </div>
+            </div>
+            </div>
+            <div class="hamburger">
+            <i onclick="Menu_Open();" id = "menu" class='bx bx-menu'></i>
+            </div>
+            <ul class="list">
+                <li class="item_list">Home</li>
+                <li class="item_list">Forum</li>
+                <li class="Store">Store</li>
+                <li class="item_list">Staff</li>
+                <li class="item_list">Discord</li>
+            </ul>
+            <ul class="list_mobile1">
+                <div class="container">
+                <div class="menu_write1">Menu</div>
+                <i onclick="Menu_Close();" id="Exit" class='bx bx-x'></i>
+                </div>
+                <li class="item_list_mobile1">Home</li>
+                <li class="item_list_mobile1">Forum</li>
+                <li class="item_list_mobile1">Store</li>
+                <li class="item_list_mobile1">Discord</li>
+                <li class="item_list_mobile1">Staff</li>
+            </ul>
+            </div>
+    </header>
+    <!-------------
+        FOOTER
+    -------------->
+    <footer class="footer">
+        <div class="footer_item">
+            <h2 style="color:#fff;" class="ChiSiamo">Chi Siamo</h2>
+            <p class="description">CoralMC nasce nel 2020 in risposta alle
+                restrizioni previste dal lockdown, dando agli amanti di Minecraft
+                la possibilità di divertirsi in un nuovo ecosistema che andasse oltre
+                le quattro mura di casa.
+                Adesso CoralMC è il server più giocato in Italia
+                e tra i più amati per coloro a cui piace della sana competizione.</p>
+        </div>
+        <div class="footer_item">
+            <h2 style="color:#fff;" class="Link">Link Utili</h2>
+            <ul class="list_link">
+                <li class="item">Store</li>
+                <hr style="border:1px solid #5f6978; width:100%">
+                <li class="item">Discord</li>
+                <hr style="border:1px solid #5f6978; width:100%">
+                <li class="item">Telegram</li>
+            </ul>
+        </div>
+        <div class="footer_item">
+            <h2 style="color:#fff;" class="supportaci">Supportaci</h2>
+            <p class="text">Regalati un'emozione unica supportando il tuo server preferito!</p>
+            <button class="button">Store</button>
+        </div>
+    </footer>
+    <script>
+        function copiaNegliAppunti(testo) {
+        let inputTemporaneo = document.createElement("input");
+        document.body.appendChild(inputTemporaneo);
+        inputTemporaneo.value = testo;
+        inputTemporaneo.select();
+        document.execCommand("copy");
+        document.body.removeChild(inputTemporaneo);
+        }
+        let testoDaCopiare = "play.coralmc.it";
+
+        let ip = document.querySelector(".ip");
+        ip.addEventListener("click", function(){
+            let ciao = document.querySelector(".ciao");
+            ciao.innerHTML = "IP Copiato";
+            copiaNegliAppunti(testoDaCopiare);
+            setTimeout(function() {
+            ciao.innerHTML = "Premi per copiare l'IP";
+            }, 5000);
+            
+        });
+    </script>
+    <script>
+        function Menu_Open()
+        {
+            let list_mobile1 = document.querySelector(".list_mobile1");
+            let items_list_mobile1 = document.querySelectorAll(".item_list_mobile1");
+            let menu_write1 = document.querySelector(".menu_write1");
+            list_mobile1.classList.add("list_mobile2");
+            items_list_mobile1.forEach((item_list_mobile1) => {
+                item_list_mobile1.classList.add("item_list_mobile2");
+            });
+            menu_write1.classList.add("menu_write2");
+            let list_mobile8 = document.querySelector(".list_mobile1");
+    let menu_write9 = document.querySelector(".menu_write1");
+    list_mobile8.classList.add("list_mobile2", "menu_open");
+    menu_write9.classList.add("menu_write2");
+        }
+        function Menu_Close()
+        {
+            let list_mobile1 = document.querySelector(".list_mobile1");
+            let menu_write1 = document.querySelector(".menu_write1");
+    
+            list_mobile1.classList.remove("menu_open");
+            list_mobile1.classList.add("menu_close");
+            setTimeout(function() {
+            list_mobile1.classList.remove("list_mobile2","menu_close");
+            list_mobile1.classList.add("width");
+            menu_write1.classList.remove("menu_write2");
+        }, 500);
+        }
+    </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</body>
+</html>
